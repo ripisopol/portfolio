@@ -10,11 +10,11 @@ const config: Config = {
         sans:  ["Bricolage Grotesque", "sans-serif"],
       },
       colors: {
-        ink:   { DEFAULT: "#0d0d0d", 2: "#141416", 3: "#1c1c1f" },
+        ink:   { DEFAULT: "#18181b", 2: "#1f1f23", 3: "#27272a" },
         amber: "#e8a030",
         green: "#4db87a",
         muted: "#888480",
-        dim:   "#484540",
+        dim:   "#52524e",
       },
     },
   },

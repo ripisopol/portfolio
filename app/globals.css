@@ -7,8 +7,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #0d0d0d;
-  color: #e6e2da;
+  background: #18181b;
+  color: #f0ece4;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -25,8 +25,8 @@ body::after {
 }
 
 ::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #0d0d0d; }
-::-webkit-scrollbar-thumb { background: #484540; }
+::-webkit-scrollbar-track { background: #18181b; }
+::-webkit-scrollbar-thumb { background: #52524e; }
 
 /* animated grid */
 .grid-bg {
@@ -55,3 +55,69 @@ body::after {
   50%       { opacity: 0; }
 }
 .animate-blink { animation: blink 1.2s step-end infinite; }
+
+/* ── Blog prose styles ─────────────────────────────────────────── */
+.prose-post {
+  color: #888480;
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+.prose-post h2 {
+  font-family: var(--font-serif, Georgia, serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #f0ece4;
+  margin: 2.4rem 0 0.8rem;
+  line-height: 1.15;
+}
+.prose-post h3 {
+  font-family: monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e8a030;
+  margin: 2rem 0 0.6rem;
+}
+.prose-post p { margin: 0 0 1.2rem; }
+.prose-post a { color: #e8a030; text-decoration: underline; text-underline-offset: 3px; }
+.prose-post a:hover { color: #f0ece4; }
+.prose-post strong { color: #f0ece4; font-weight: 600; }
+.prose-post em { color: #b0aaa4; }
+.prose-post ul { margin: 0 0 1.2rem; padding-left: 1.4rem; list-style: none; }
+.prose-post ul li::before { content: "–"; color: #e8a030; margin-right: 0.5rem; margin-left: -1.4rem; }
+.prose-post ol { margin: 0 0 1.2rem; padding-left: 1.4rem; }
+.prose-post ol li { margin-bottom: 0.3rem; }
+.prose-post code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82em;
+  color: #e8a030;
+  background: rgba(232,160,48,0.08);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+.prose-post pre {
+  background: #1e1e2e;
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 1.2rem;
+  overflow-x: auto;
+  margin: 0 0 1.4rem;
+}
+.prose-post pre code {
+  background: none;
+  padding: 0;
+  color: #cdd6f4;
+  font-size: 0.82rem;
+}
+.prose-post blockquote {
+  border-left: 2px solid #e8a030;
+  padding: 0.6rem 0 0.6rem 1.2rem;
+  background: rgba(232,160,48,0.05);
+  margin: 0 0 1.4rem;
+  color: #888480;
+  font-style: italic;
+}
+.prose-post hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  margin: 2rem 0;
+}

@@ -18,11 +18,11 @@ export const config = {
 
   // ── Hero ─────────────────────────────────────────────────────
   hero: {
-    eyebrow: "Industrial engineer. Accidental IT person. Now intentional.",
+    eyebrow: "Industrial engineer turned accidental IT person. The accidental part is over.",
 
     titleLines: ["Monitoring, patching,", "NOC — now aiming", "at infra."],
 
-    bio: "Industrial engineering grad who ended up in IT across banking giants — BRI, BSI, Bank Jakarta. Touched monitoring, patching, and NOC support. Now deliberately building toward DevOps and infrastructure. The breadth was accidental. The direction is on purpose.",
+    bio: "Industrial engineering grad who ended up in IT at three Indonesian banks — BRI, BSI, Bank Jakarta. Did monitoring, patching, NOC. Built some internal tools with a lot of AI help, which I'm being upfront about. Now deliberately aiming at DevOps and infrastructure. The detour was unplanned. The direction isn't.",
 
     boldInBio: "deliberately building toward DevOps and infrastructure.",
 
@@ -45,47 +45,48 @@ export const config = {
         icon:    "🎓",
         role:    "Industrial Engineering",
         company: "Telkom University →",
-        note:    "graduated 2021 → googled 'what can engineers do in IT'",
+        note:    "graduated 2021. googled 'what jobs can engineers get'. ended up here.",
         tag:     null as string | null,
       },
       {
         icon:    "🖥️",
         role:    "Monitoring Team (L0)",
         company: "Boer Technology @ BRI →",
-        note:    "first IT job. ELK stack. learned what alerts actually mean.",
+        note:    "first IT job. stared at dashboards. learned alerts lie sometimes.",
         tag:     "2023",
       },
       {
         icon:    "🩹",
         role:    "Patching & Hardening Team",
         company: "Visionet @ BSI →",
-        note:    "BigFix, vuln remediation. updates break things. complicated.",
+        note:    "BigFix. patch management. learned 'just update it' is never just updating it.",
         tag:     "2025",
       },
       {
         icon:    "📡",
         role:    "NOC Support L1",
         company: "Visionet @ Bank Jakarta",
-        note:    "OPmanager, Grafana, SLAs, incident escalation at scale.",
+        note:    "OPmanager, Grafana, SLAs. built some tools. team uses them. still surprised.",
         tag:     "current",
       },
     ],
-    nextLine: "next stop: DevOps / Infrastructure Engineer",
+    nextLine: "next: DevOps / Infrastructure Engineer. working on it.",
   },
 
   // ── About ────────────────────────────────────────────────────
   about: {
-    headlineLines: ["Took a detour.", "Learned a lot."],
+    headlineLines: ["Took a detour.", "Learned a lot.", "Still learning."],
 
     paragraphs: [
-      `I studied industrial engineering at Telkom University — systems thinking, process optimization, operations. Then I graduated and couldn't find a "proper" engineering job. Ended up in IT almost by accident. Turns out systems thinking applies everywhere, especially in infrastructure.`,
+      `I studied industrial engineering at Telkom University — systems thinking, process optimization, how to make things not break. Then I graduated and couldn't find a "proper" engineering job. Ended up in IT almost by accident. Turns out systems thinking applies everywhere, especially in infrastructure. The degree wasn't wasted. It was just misfiled.`,
       `Since 2023 I've worked across three of Indonesia's major banks — BRI, Bank Syariah Indonesia, and Bank Jakarta — in monitoring, vulnerability patching, and NOC support. Three flavors of "keep the lights on." Each one taught me something different about how systems behave under real load.`,
-      `On the side I've been learning DevOps properly: VPS from scratch, full observability stack (Prometheus + Grafana + Loki), automated deployments with GitHub Actions. This portfolio site runs on that exact setup. The lab is real. The learning is ongoing.`,
+      `On the side: VPS from scratch, observability stack, CI/CD pipeline. This portfolio deploys itself on every push, which felt appropriate. The lab is real. The mistakes are documented. Some of them are in the troubleshooting section of a very long Word document.`,
+      `At work I've also been building things that scratch real itches. A Python dashboard that pulls from internal monitoring tools, filters down to only the alerts worth caring about, and spits out ready-to-paste ticket templates — the team uses it daily. Separately, a UiPath Studio automation I initiated from scratch that handles data fetching, screenshot capture, and report generation for flash and end-of-shift reports. Both were heavily AI-assisted. Being upfront about that. They work, people use them, and the problems they solve were real.`,
     ],
 
-    honestQuote: `I don't have a CS degree or 5 years of DevOps experience. I have 2+ years of watching banking systems fail at inconvenient hours and trying to understand why, plus a homelab I take maybe too seriously. Coming from an industrial engineering background, I ask different questions — sometimes that's actually useful.`,
+    honestQuote: `No CS degree. No 5 years of DevOps. What I have: 2+ years of watching banking infrastructure fail at inconvenient hours, a homelab I take perhaps too seriously, and a habit of building tools when the existing ones are annoying enough. A lot of this was AI-assisted. I document that honestly because I think it matters — and because someone will ask.`,
 
-    closing: `I'm the kind of person who reads the full error message, checks the runbook, and documents what broke so the next shift doesn't have to guess. Industrial engineering trained me to think in systems. IT ops taught me those systems break in creative ways.`,
+    closing: `I read the full error message. I check the runbook. I document what broke. Industrial engineering taught me to think in systems — IT ops taught me those systems break in ways the runbook hasn't seen yet. I write those down too.`,
   },
 
   // ── Skills ───────────────────────────────────────────────────
@@ -111,7 +112,7 @@ export const config = {
         { name: "vuln remediation",   level: "s" as const },
         { name: "change management",  level: "s" as const },
         { name: "compliance reports", level: "l" as const },
-        { name: "Fail2Ban",           level: "l" as const },
+        { name: "Fail2Ban",           level: "s" as const },
       ],
     },
     {
@@ -155,6 +156,7 @@ export const config = {
         { name: "Git",          level: "s" as const },
         { name: "Python",       level: "l" as const },
         { name: "REST APIs",    level: "l" as const },
+        { name: "UiPath",       level: "l" as const },
         { name: "ML basics",    level: "f" as const },
       ],
     },
@@ -194,6 +196,20 @@ export const config = {
   // status: "live" | "wip" | "idea"
   projects: [
     {
+      name:   "NOC Alert Dashboard",
+      desc:   "Python web app built for my team at work — funnels alerts from internal monitoring tools down to only what needs attention. Healthy services stay hidden unless toggled. Has up/down history per service and generates ready-to-paste ticket and escalation templates. Adopted by the full team. L2 said it makes life easier, which is the highest possible praise in NOC.",
+      stack:  ["Python", "REST APIs", "AI-assisted"],
+      status: "live" as const,
+      links:  [],
+    },
+    {
+      name:   "Shift Report Automation",
+      desc:   "UiPath Studio automation I initiated and built from scratch at work. Handles data fetching, screenshot capture of dashboard panels, and report generation for two report types — flash reports (WhatsApp) and end-of-shift reports (HTML email + Excel). Reduced report prep from manual writing to review-and-send. Distributed to multiple teams, layers, and managers.",
+      stack:  ["UiPath Studio", "HTTP Requests", "Excel", "UI Automation"],
+      status: "wip" as const,
+      links:  [],
+    },
+    {
       name:   "VPS Lab — Full Production Setup",
       desc:   "Built a production-style VPS from scratch. SSH hardening, UFW firewall, Docker, Nginx Proxy Manager with auto-SSL, GitHub Actions CI/CD, full observability stack. Real server, real config, real mistakes documented along the way.",
       stack:  ["Ubuntu 24.04", "Docker", "Nginx Proxy Manager", "Grafana", "Prometheus", "Loki", "GitHub Actions"],
@@ -205,7 +221,7 @@ export const config = {
       desc:   "Self-hosted monitoring — Prometheus scrapes metrics, Loki aggregates logs, Promtail ships them, Grafana visualizes everything. All containers internal, accessible only through HTTPS reverse proxy. Overkill for one server. Still worth it.",
       stack:  ["Grafana", "Prometheus", "Loki", "Promtail", "Node Exporter", "Docker Compose"],
       status: "live" as const,
-      links:  [],
+      links:  [{ icon: "↗", href: "https://grafana.rizalsolihin.my.id" }],
     },
     {
       name:   "This Portfolio",
@@ -223,15 +239,94 @@ export const config = {
   // ── Contact ──────────────────────────────────────────────────
   contact: {
     headline: "Let's talk.",
-    subtext:  "Open to DevOps / infra roles, IT ops, or anything where systems need watching and fixing. Also open to feedback on my Grafana dashboards.",
+    subtext:  "Open to DevOps, infra, or IT ops roles. Also open to feedback on the Grafana dashboards, though be gentle.",
     availability: "Open to Work",
     availDesc:    "Looking for DevOps, infrastructure, or IT operations roles. 2+ years experience across banking environments. Based in Central Jakarta. Open to remote or on-site.",
     links: [
       { icon: "✉",  label: "rizalsolihin@hotmail.com",  href: "mailto:rizalsolihin@hotmail.com" },
+      { icon: "✉",  label: "ripisopol@gmail.com",       href: "mailto:ripisopol@gmail.com" },
       { icon: "⌥",  label: "github.com/ripisopol",      href: "https://github.com/ripisopol" },
       { icon: "⇗",  label: "linkedin.com/in/rizalsolihin", href: "https://linkedin.com/in/rizalsolihin" },
+    ],
+  },
+
+  // ── Certifications ───────────────────────────────────────────
+  // status: "done" | "inprogress" | "expired"
+  // ✏️  Add your certs here. Copy a block to add more.
+  certifications: [
+    {
+      name:     "AWS Certified Cloud Practitioner",
+      issuer:   "Amazon Web Services",
+      year:     "2022",
+      status:   "expired" as const,
+      credUrl:  "",   // ✏️  paste credential URL if you have it
+    },
+    {
+      name:     "Your Cert Name Here",
+      issuer:   "Issuing Body",
+      year:     "2025",
+      status:   "done" as const,
+      credUrl:  "",
+    },
+    {
+      name:     "Another Cert in Progress",
+      issuer:   "Issuing Body",
+      year:     "",
+      status:   "inprogress" as const,
+      credUrl:  "",
+    },
+    // ✏️  Add more: copy a block above
+  ],
+
+  // ── Currently Learning ───────────────────────────────────────
+  // ✏️  Keep this honest — what you're actually working on right now
+  learning: {
+    headline: "Always something in the pipeline.",
+    items: [
+      { topic: "Kubernetes",        detail: "k3s on local VM, working through CKA prep material" },
+      { topic: "Terraform",         detail: "infrastructure as code — stop doing things manually" },
+      { topic: "Ansible",           detail: "configuration management basics" },
+      { topic: "Python scripting",  detail: "beyond AI-assisted — actually understanding what I ship" },
+      { topic: "Bash",              detail: "proper scripting, not just one-liners" },
+      // ✏️  Add or remove items freely
+    ],
+  },
+
+  // ── Languages ────────────────────────────────────────────────
+  languages: [
+    { lang: "Bahasa Indonesia", level: "Native"      },
+    { lang: "English",          level: "Professional" },
+    // ✏️  Add more if needed
+  ],
+
+  // ── Open To ──────────────────────────────────────────────────
+  openTo: [
+    "DevOps Engineer",
+    "Infrastructure Engineer",
+    "IT Operations",
+    "NOC / SOC",
+    "Site Reliability Engineering",
+    // ✏️  Remove anything that doesn't fit, add anything that does
+  ],
+
+  // ── References ───────────────────────────────────────────────
+  // ✏️  Add real references when you're ready — keep name/title/company,
+  //     leave contact blank until you have permission to share publicly.
+  //     Or just leave the placeholder text as-is.
+  references: {
+    note: "Available on request.",
+    items: [
+      {
+        name:     "Your Reference Name",
+        title:    "Their Job Title",
+        company:  "Their Company",
+        relation: "e.g. Direct supervisor at Visionet",
+        contact:  "",   // ✏️  only add if you have permission
+      },
+      // ✏️  Add more: copy a block above
     ],
   },
 };
 
 export type Config = typeof config;
+// ── append new sections ──────────────────────────────────────────

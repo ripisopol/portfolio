@@ -39,7 +39,7 @@ export default function Skills() {
             {config.skills.map((cat) => (
               <div
                 key={cat.name}
-                className="bg-[#0d0d0d] p-7 hover:bg-[#141416] transition-colors duration-200"
+                className="bg-[#18181b] p-7 hover:bg-[#1f1f23] transition-colors duration-200"
               >
                 <div className="text-[1.3rem] mb-3">{cat.icon}</div>
                 <div className="font-mono text-[0.62rem] tracking-[0.12em] uppercase text-amber mb-4">

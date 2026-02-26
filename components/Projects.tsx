@@ -28,19 +28,19 @@ export default function Projects() {
             {config.projects.map((p, i) => (
               <div
                 key={i}
-                className="group bg-[#0d0d0d] px-8 py-9 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-start border-l-2 border-transparent hover:border-amber hover:bg-[#141416] transition-all duration-200"
+                className="group bg-[#18181b] px-8 py-9 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-start border-l-2 border-transparent hover:border-amber hover:bg-[#1f1f23] transition-all duration-200"
               >
                 <div>
                   <div className="font-mono text-[0.58rem] tracking-[0.1em] text-dim mb-2">
                     {String(i + 1).padStart(2, "0")}
                   </div>
-                  <div className="font-serif italic text-[1.35rem] text-[#e6e2da] mb-2 group-hover:text-amber transition-colors duration-200">
+                  <div className="font-serif italic text-[1.35rem] text-[#f0ece4] mb-2 group-hover:text-amber transition-colors duration-200">
                     {p.name}
                   </div>
                   <p className="text-[0.86rem] text-muted leading-[1.7] max-w-[600px] mb-4">{p.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {p.stack.map((s) => (
-                      <span key={s} className="font-mono text-[0.58rem] text-dim bg-[#1c1c1f] border border-white/[0.07] px-2 py-0.5">
+                      <span key={s} className="font-mono text-[0.58rem] text-dim bg-[#27272a] border border-white/[0.07] px-2 py-0.5">
                         {s}
                       </span>
                     ))}

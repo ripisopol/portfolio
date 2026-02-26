@@ -11,7 +11,7 @@ export default function SectionHeader({ tag, title, sub }: Props) {
         <span className="inline-block w-5 h-px bg-amber" />
         {tag}
       </div>
-      <h2 className="font-serif italic text-[clamp(2rem,3.8vw,3rem)] leading-[1.1] tracking-[-0.01em] text-[#e6e2da] mb-3">
+      <h2 className="font-serif italic text-[clamp(2rem,3.8vw,3rem)] leading-[1.1] tracking-[-0.01em] text-[#f0ece4] mb-3">
         {title}
       </h2>
       {sub && (

@@ -6,7 +6,7 @@ export default function Contact() {
   const { contact } = config;
 
   return (
-    <section id="contact" className="py-24 bg-[#141416]">
+    <section id="contact" className="py-24 bg-[#1f1f23]">
       <div className="max-w-[1060px] mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
 
@@ -28,7 +28,7 @@ export default function Contact() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="bg-[#1c1c1f] border border-white/[0.13] p-7 mt-[3.75rem]">
+            <div className="bg-[#27272a] border border-white/[0.13] p-7 mt-[3.75rem]">
               <div className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-dim mb-3">
                 availability
               </div>

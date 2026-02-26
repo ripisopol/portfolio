@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { config } from "@/lib/config";
 
-const links = ["about", "skills", "experience", "projects", "contact"];
+const links = ["about", "skills", "experience", "projects", "certifications", "contact"];
 
 export default function Nav() {
   const [active, setActive] = useState("");
@@ -15,7 +15,7 @@ export default function Nav() {
           if (e.isIntersecting) setActive(e.target.id);
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.3 }
     );
     links.forEach((id) => {
       const el = document.getElementById(id);
@@ -25,22 +25,22 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b border-white/[0.07] bg-[#0d0d0d]/88 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b border-white/[0.07] bg-[#18181b]/88 backdrop-blur-md">
       <div className="max-w-[1060px] mx-auto px-8 lg:px-12 h-full flex items-center justify-between">
         {/* logo */}
         <span className="font-mono text-[0.7rem] tracking-[0.06em] text-amber">
           {config.nameShort}{" "}
-          <span className="text-[#484540]">// {config.domain}</span>
+          <span className="text-[#52524e]">// {config.domain}</span>
         </span>
 
         {/* links */}
-        <ul className="hidden md:flex gap-9 list-none">
+        <ul className="hidden md:flex gap-7 list-none">
           {links.map((id) => (
             <li key={id}>
               <a
                 href={`#${id}`}
-                className={`font-mono text-[0.65rem] tracking-[0.1em] uppercase transition-colors duration-200 ${
-                  active === id ? "text-amber" : "text-[#484540] hover:text-amber"
+                className={`font-mono text-[0.62rem] tracking-[0.1em] uppercase transition-colors duration-200 ${
+                  active === id ? "text-amber" : "text-[#52524e] hover:text-amber"
                 }`}
               >
                 {id}
@@ -49,10 +49,18 @@ export default function Nav() {
           ))}
         </ul>
 
-        {/* status badge */}
-        <div className="flex items-center gap-2 font-mono text-[0.62rem] text-green">
+        {/* notes link + status badge */}
+        <div className="flex items-center gap-5">
+          <a
+            href="/blog"
+            className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-[#52524e] hover:text-amber transition-colors duration-200"
+          >
+            notes
+          </a>
+          <div className="flex items-center gap-2 font-mono text-[0.62rem] text-green">
           <span className="w-[5px] h-[5px] rounded-full bg-green animate-breathe" />
-          {config.status}
+            {config.status}
+          </div>
         </div>
       </div>
     </nav>
