@@ -26,7 +26,7 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b border-white/[0.07] bg-[#0d0d0d]/88 backdrop-blur-md">
-      <div className="max-w-[1060px] mx-auto px-8 h-full flex items-center justify-between">
+      <div className="max-w-[1060px] mx-auto px-8 lg:px-12 h-full flex items-center justify-between">
         {/* logo */}
         <span className="font-mono text-[0.7rem] tracking-[0.06em] text-amber">
           {config.nameShort}{" "}

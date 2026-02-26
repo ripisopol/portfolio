@@ -19,6 +19,7 @@ export default function About() {
               <div className="font-serif italic text-[1.1rem] text-[#e6e2da] mb-0.5">{name}</div>
               <div className="font-mono text-[0.62rem] tracking-[0.08em] uppercase text-amber mb-5">{currentFocus}</div>
               <table className="w-full border-collapse text-[0.62rem] font-mono">
+                <tbody>
                 {[
                   ["degree",   degree],
                   ["location", location],
@@ -31,6 +32,7 @@ export default function About() {
                     <td className={`py-2 ${k === "status" ? "text-green" : "text-muted"}`}>{v}</td>
                   </tr>
                 ))}
+                </tbody>
               </table>
             </div>
           </Reveal>

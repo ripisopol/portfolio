@@ -9,33 +9,31 @@ export const config = {
   // ── Identity ─────────────────────────────────────────────────
   name:         "Rizal Solihin",
   initials:     "RS",
-  nameShort:    "rizal.sh",            // nav logo
+  nameShort:    "rizal.sh",
   domain:       "rizalsolihin.my.id",
-  location:     "Indonesia 🇮🇩",
-  degree:       "Industrial Engineering",
+  location:     "Central Jakarta, Indonesia 🇮🇩",
+  degree:       "Industrial Engineering — Telkom University",
   status:       "open to opportunities",
-  currentFocus: "aspiring DevOps / Infra",
+  currentFocus: "System Ops → aspiring DevOps / Infra",
 
   // ── Hero ─────────────────────────────────────────────────────
   hero: {
-    eyebrow: "Graduated engineer. Accidental IT person. Now intentional.",
+    eyebrow: "Industrial engineer. Accidental IT person. Now intentional.",
 
-    // First line is white, subsequent lines are amber
-    titleLines: ["Took the long way", "around to infra."],
+    titleLines: ["Monitoring, patching,", "NOC — now aiming", "at infra."],
 
-    bio: "Industrial engineering grad who somehow ended up in IT. Touched monitoring, patching, and NOC support across different projects. Now deliberately aiming at DevOps and infrastructure. The breadth was accidental. The depth is on purpose.",
+    bio: "Industrial engineering grad who ended up in IT across banking giants — BRI, BSI, Bank Jakarta. Touched monitoring, patching, and NOC support. Now deliberately building toward DevOps and infrastructure. The breadth was accidental. The direction is on purpose.",
 
-    boldInBio: "deliberately aiming at DevOps and infrastructure.",
+    boldInBio: "deliberately building toward DevOps and infrastructure.",
 
     cta1: { label: "See my work",  href: "#projects" },
     cta2: { label: "Get in touch", href: "#contact" },
 
-    // color: "green" | "amber" | "red"
     stats: [
-      { label: "degree", value: "industrial eng", color: "amber"  as const },
-      { label: "IT exp", value: "~2 yrs",         color: "green"  as const },
-      { label: "VPS",    value: "self-managed",   color: "green"  as const },
-      { label: "status", value: "open",           color: "green"  as const },
+      { label: "degree",    value: "industrial eng",   color: "amber" as const },
+      { label: "exp",       value: "2+ yrs IT ops",    color: "green" as const },
+      { label: "placement", value: "3 banks",          color: "green" as const },
+      { label: "status",    value: "open",             color: "green" as const },
     ],
   },
 
@@ -46,30 +44,30 @@ export const config = {
       {
         icon:    "🎓",
         role:    "Industrial Engineering",
-        company: "university →",
-        note:    "graduated → panicked → googled 'what can engineers do in IT'",
+        company: "Telkom University →",
+        note:    "graduated 2021 → googled 'what can engineers do in IT'",
         tag:     null as string | null,
       },
       {
-        icon: "🖥️",
-        role: "Monitoring Team",
-        company: "project #1 →",
-        note: "first IT job. learned what alerts actually mean.",
-        tag: "entry",
+        icon:    "🖥️",
+        role:    "Monitoring Team (L0)",
+        company: "Boer Technology @ BRI →",
+        note:    "first IT job. ELK stack. learned what alerts actually mean.",
+        tag:     "2023",
       },
       {
-        icon: "🩹",
-        role: "Patching Team",
-        company: "project #2 →",
-        note: "updates break things. and also fix things. complicated.",
-        tag: "growing",
+        icon:    "🩹",
+        role:    "Patching & Hardening Team",
+        company: "Visionet @ BSI →",
+        note:    "BigFix, vuln remediation. updates break things. complicated.",
+        tag:     "2025",
       },
       {
-        icon: "📡",
-        role: "NOC Support",
-        company: "project #3",
-        note: "monitoring at scale. the infra obsession begins.",
-        tag: "current",
+        icon:    "📡",
+        role:    "NOC Support L1",
+        company: "Visionet @ Bank Jakarta",
+        note:    "OPmanager, Grafana, SLAs, incident escalation at scale.",
+        tag:     "current",
       },
     ],
     nextLine: "next stop: DevOps / Infrastructure Engineer",
@@ -80,19 +78,42 @@ export const config = {
     headlineLines: ["Took a detour.", "Learned a lot."],
 
     paragraphs: [
-      `I studied industrial engineering — process optimization, systems thinking, supply chains. Then I graduated, couldn't find a "proper" engineering job, and ended up in IT almost by accident. Turns out systems thinking applies everywhere, especially in infrastructure.`,
-      `Across three projects I've worked in monitoring, vulnerability patching, and NOC support — three flavors of "keep the lights on." Each one taught me something different about how systems actually behave when real users are hitting them.`,
-      `On the side I've been learning DevOps properly: set up a VPS from scratch, built a full observability stack, automated deployments with GitHub Actions. The lab is running. The learning is ongoing.`,
+      `I studied industrial engineering at Telkom University — systems thinking, process optimization, operations. Then I graduated and couldn't find a "proper" engineering job. Ended up in IT almost by accident. Turns out systems thinking applies everywhere, especially in infrastructure.`,
+      `Since 2023 I've worked across three of Indonesia's major banks — BRI, Bank Syariah Indonesia, and Bank Jakarta — in monitoring, vulnerability patching, and NOC support. Three flavors of "keep the lights on." Each one taught me something different about how systems behave under real load.`,
+      `On the side I've been learning DevOps properly: VPS from scratch, full observability stack (Prometheus + Grafana + Loki), automated deployments with GitHub Actions. This portfolio site runs on that exact setup. The lab is real. The learning is ongoing.`,
     ],
 
-    honestQuote: `I don't have 5 years of DevOps experience. I have 2 years of watching prod systems break and trying to understand why, plus a homelab I take maybe too seriously. Coming from a non-CS background, I ask different questions — sometimes that's actually useful.`,
+    honestQuote: `I don't have a CS degree or 5 years of DevOps experience. I have 2+ years of watching banking systems fail at inconvenient hours and trying to understand why, plus a homelab I take maybe too seriously. Coming from an industrial engineering background, I ask different questions — sometimes that's actually useful.`,
 
-    closing: `I'm the kind of person who reads the full error message, checks the second Google result, and documents what broke so it doesn't happen again. Industrial engineering trained me to think in systems. IT is just systems with more alerts.`,
+    closing: `I'm the kind of person who reads the full error message, checks the runbook, and documents what broke so the next shift doesn't have to guess. Industrial engineering trained me to think in systems. IT ops taught me those systems break in creative ways.`,
   },
 
   // ── Skills ───────────────────────────────────────────────────
   // level: "s" = solid/prod  "l" = learning  "f" = familiar
   skills: [
+    {
+      icon: "📡", name: "Monitoring & NOC",
+      tags: [
+        { name: "Grafana",        level: "s" as const },
+        { name: "OPmanager",      level: "s" as const },
+        { name: "ELK Stack",      level: "s" as const },
+        { name: "incident triage",level: "s" as const },
+        { name: "Prometheus",     level: "s" as const },
+        { name: "Loki",           level: "s" as const },
+        { name: "alert rules",    level: "l" as const },
+      ],
+    },
+    {
+      icon: "🩹", name: "Patching & Security",
+      tags: [
+        { name: "BigFix",             level: "s" as const },
+        { name: "patch management",   level: "s" as const },
+        { name: "vuln remediation",   level: "s" as const },
+        { name: "change management",  level: "s" as const },
+        { name: "compliance reports", level: "l" as const },
+        { name: "Fail2Ban",           level: "l" as const },
+      ],
+    },
     {
       icon: "🐧", name: "Linux & Server",
       tags: [
@@ -105,57 +126,36 @@ export const config = {
       ],
     },
     {
-      icon: "🐳", name: "Docker & Containers",
+      icon: "🐳", name: "Docker & CI/CD",
       tags: [
         { name: "Docker",          level: "s" as const },
         { name: "Compose v2",      level: "s" as const },
-        { name: "bridge networks", level: "s" as const },
-        { name: "volumes",         level: "l" as const },
+        { name: "GitHub Actions",  level: "s" as const },
+        { name: "GHCR",            level: "s" as const },
+        { name: "bridge networks", level: "l" as const },
         { name: "Kubernetes",      level: "f" as const },
       ],
     },
     {
-      icon: "⚡", name: "CI/CD",
+      icon: "🌐", name: "Networking & Infra",
       tags: [
-        { name: "GitHub Actions", level: "s" as const },
-        { name: "GHCR",           level: "s" as const },
-        { name: "auto-deploy",    level: "l" as const },
-        { name: "secrets mgmt",   level: "l" as const },
-        { name: "Jenkins",        level: "f" as const },
-      ],
-    },
-    {
-      icon: "📊", name: "Monitoring & Observability",
-      tags: [
-        { name: "Grafana",       level: "s" as const },
-        { name: "Prometheus",    level: "s" as const },
-        { name: "Loki",          level: "s" as const },
-        { name: "Promtail",      level: "s" as const },
-        { name: "Node Exporter", level: "l" as const },
-        { name: "alert rules",   level: "l" as const },
-      ],
-    },
-    {
-      icon: "🌐", name: "Networking & Security",
-      tags: [
-        { name: "reverse proxy",      level: "s" as const },
-        { name: "Let's Encrypt",      level: "s" as const },
-        { name: "DNS records",        level: "s" as const },
-        { name: "Fail2Ban",           level: "l" as const },
-        { name: "vulnerability mgmt", level: "l" as const },
-        { name: "WireGuard",          level: "f" as const },
+        { name: "reverse proxy",   level: "s" as const },
+        { name: "Let's Encrypt",   level: "s" as const },
+        { name: "DNS records",     level: "s" as const },
+        { name: "SLA / SOP",       level: "s" as const },
+        { name: "ticketing systems",level: "s" as const },
+        { name: "WireGuard",       level: "f" as const },
       ],
     },
     {
       icon: "💻", name: "Dev & Other",
       tags: [
-        { name: "TypeScript",      level: "s" as const },
-        { name: "Next.js",         level: "s" as const },
-        { name: "Git",             level: "s" as const },
-        { name: "Python",          level: "l" as const },
-        { name: "REST APIs",       level: "l" as const },
-        { name: "ML basics",       level: "f" as const },
-        { name: "cybersec basics", level: "f" as const },
+        { name: "TypeScript",   level: "s" as const },
+        { name: "Next.js",      level: "s" as const },
+        { name: "Git",          level: "s" as const },
+        { name: "Python",       level: "l" as const },
+        { name: "REST APIs",    level: "l" as const },
+        { name: "ML basics",    level: "f" as const },
       ],
     },
   ],
@@ -164,57 +164,56 @@ export const config = {
   // type: "current" | "past"
   experience: [
     {
-      title:   "NOC Support",
-      company: "Project #3",
-      period:  "current",
+      title:   "System Operation Administrator — NOC Support L1",
+      company: "Visionet Data Internasional · Bank Jakarta",
+      period:  "Jul 2025 – present",
       type:    "current" as const,
-      desc:    "Network operations center — monitoring infrastructure at scale, incident response, escalation handling. Where the abstract becomes very concrete at 2am.",
-      tags:    ["monitoring", "incident response", "escalation", "network ops"],
+      desc:    "Monitor network, systems, servers, and applications using OPmanager and Grafana. Perform initial diagnosis, escalate to L2/L3 per SLA, handle incident documentation and shift handovers. Where the runbook meets 2am reality.",
+      tags:    ["OPmanager", "Grafana", "incident response", "SLA", "ticketing", "escalation", "health checks"],
     },
     {
-      title:   "Patching Team",
-      company: "Project #2",
-      period:  "2024",
+      title:   "System Operation Administrator — Patching & Hardening",
+      company: "Visionet Data Internasional · Bank Syariah Indonesia",
+      period:  "Jan 2025 – May 2025",
       type:    "past" as const,
-      desc:    `Vulnerability management and system patching. Learned that "just update it" is never as simple as it sounds — and that change windows exist for good reason.`,
-      tags:    ["vulnerability mgmt", "patch management", "change control", "Windows", "Linux"],
+      desc:    "Deployed and monitored OS and application patches using BigFix across BSI infrastructure. Tracked compliance, generated remediation reports, collaborated with security and infra teams. Learned that \"just update it\" is rarely that simple.",
+      tags:    ["BigFix", "patch management", "vulnerability remediation", "compliance", "change control", "Windows", "Linux"],
     },
     {
-      title:   "Monitoring Team",
-      company: "Project #1",
-      period:  "2023",
+      title:   "IT Engineer — Monitoring Team (L0)",
+      company: "Boer Technology · Bank Rakyat Indonesia",
+      period:  "Apr 2023 – Jun 2023",
       type:    "past" as const,
-      desc:    "First IT role out of university. Infrastructure monitoring, alert triage, dashboard building. The job that started the obsession with knowing why systems fail.",
-      tags:    ["monitoring", "alerting", "dashboard", "triage"],
+      desc:    "First IT role. Monitored banking application dashboards and infrastructure using ELK Stack. Detected anomalies, opened incident tickets, performed health checks on servers and core banking systems. The job that started the whole obsession.",
+      tags:    ["ELK Stack", "monitoring", "alerting", "incident tickets", "health checks", "shift handover"],
     },
     // ✏️  Add more: copy a block above
   ],
 
   // ── Projects ─────────────────────────────────────────────────
   // status: "live" | "wip" | "idea"
-  // links: [{ icon, href }] — use [] for none
   projects: [
     {
-      name:   "VPS Lab — Full Setup",
-      desc:   "Built a production-style VPS from scratch. SSH hardening, UFW, Docker, Nginx Proxy Manager with auto-SSL, GitHub Actions CI/CD, full observability stack. Real server, real config, real mistakes documented.",
-      stack:  ["Ubuntu 24.04", "Docker", "NPM", "Grafana", "Prometheus", "Loki", "GitHub Actions"],
+      name:   "VPS Lab — Full Production Setup",
+      desc:   "Built a production-style VPS from scratch. SSH hardening, UFW firewall, Docker, Nginx Proxy Manager with auto-SSL, GitHub Actions CI/CD, full observability stack. Real server, real config, real mistakes documented along the way.",
+      stack:  ["Ubuntu 24.04", "Docker", "Nginx Proxy Manager", "Grafana", "Prometheus", "Loki", "GitHub Actions"],
       status: "live" as const,
       links:  [{ icon: "↗", href: "https://github.com/ripisopol" }],
     },
     {
       name:   "Observability Stack",
-      desc:   "Self-hosted monitoring — Prometheus scrapes, Loki aggregates logs, Promtail ships them, Grafana visualizes. All containers internal, accessible only through HTTPS reverse proxy. Overkill for one server. Worth it.",
+      desc:   "Self-hosted monitoring — Prometheus scrapes metrics, Loki aggregates logs, Promtail ships them, Grafana visualizes everything. All containers internal, accessible only through HTTPS reverse proxy. Overkill for one server. Still worth it.",
       stack:  ["Grafana", "Prometheus", "Loki", "Promtail", "Node Exporter", "Docker Compose"],
       status: "live" as const,
       links:  [],
     },
     {
       name:   "This Portfolio",
-      desc:   "Push to main → GitHub Actions builds Docker image → pushes to GHCR → SSHes into VPS → pulls and restarts. Zero manual steps. A portfolio that deploys itself felt appropriate.",
-      stack:  ["Next.js 15", "TypeScript", "Tailwind", "Docker", "GitHub Actions", "GHCR"],
+      desc:   "Push to main → GitHub Actions builds Docker image → pushes to GHCR → SSHes into VPS → pulls and restarts. Zero manual steps. A portfolio that deploys itself felt appropriate for someone trying to get into DevOps.",
+      stack:  ["Next.js 15", "TypeScript", "Tailwind CSS", "Docker", "GitHub Actions", "GHCR"],
       status: "live" as const,
       links:  [
-        { icon: "↗", href: "https://github.com/ripisopol/portfolio-v2" },
+        { icon: "↗", href: "https://github.com/ripisopol/portfolio" },
         { icon: "⊕", href: "https://rizalsolihin.my.id" },
       ],
     },
@@ -224,13 +223,14 @@ export const config = {
   // ── Contact ──────────────────────────────────────────────────
   contact: {
     headline: "Let's talk.",
-    subtext:  "Open to DevOps / infra roles, internships, or just a chat about systems. Also open to being told my Grafana dashboards need work.",
+    subtext:  "Open to DevOps / infra roles, IT ops, or anything where systems need watching and fixing. Also open to feedback on my Grafana dashboards.",
     availability: "Open to Work",
-    availDesc:    "Looking for DevOps, infrastructure, or SRE roles. Industrial engineering background, IT ops experience. Based in Indonesia, open to remote.",
+    availDesc:    "Looking for DevOps, infrastructure, or IT operations roles. 2+ years experience across banking environments. Based in Central Jakarta. Open to remote or on-site.",
     links: [
-      { icon: "✉",  label: "ripisopol@gmail.com",   href: "mailto:ripisopol@gmail.com" },
-      { icon: "⌥",  label: "github.com/ripisopol",  href: "https://github.com/ripisopol" },
-      { icon: "⇗",  label: "linkedin",              href: "https://linkedin.com/in/rizalsolihin" },
+      { icon: "✉",  label: "rizalsolihin@hotmail.com",  href: "mailto:rizalsolihin@hotmail.com" },
+      { icon: "✉",  label: "ripisopol@gmail.com",       href: "mailto:ripisopol@gmail.com" },
+      { icon: "⌥",  label: "github.com/ripisopol",      href: "https://github.com/ripisopol" },
+      { icon: "⇗",  label: "linkedin.com/in/rizalsolihin", href: "https://linkedin.com/in/rizalsolihin" },
     ],
   },
 };
