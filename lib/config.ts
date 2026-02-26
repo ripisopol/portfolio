@@ -228,7 +228,6 @@ export const config = {
     availDesc:    "Looking for DevOps, infrastructure, or IT operations roles. 2+ years experience across banking environments. Based in Central Jakarta. Open to remote or on-site.",
     links: [
       { icon: "✉",  label: "rizalsolihin@hotmail.com",  href: "mailto:rizalsolihin@hotmail.com" },
-      { icon: "✉",  label: "ripisopol@gmail.com",       href: "mailto:ripisopol@gmail.com" },
       { icon: "⌥",  label: "github.com/ripisopol",      href: "https://github.com/ripisopol" },
       { icon: "⇗",  label: "linkedin.com/in/rizalsolihin", href: "https://linkedin.com/in/rizalsolihin" },
     ],
