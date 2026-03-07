@@ -27,16 +27,16 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.07] bg-[#18181b]/90 backdrop-blur-md">
-      <nav className="max-w-[1060px] mx-auto px-4 sm:px-8 lg:px-12 h-14 flex items-center justify-between">
+      <nav className="max-w-[1060px] mx-auto px-4 sm:px-8 lg:px-12 h-14 grid grid-cols-3 items-center">
         {/* logo */}
-        <div className="min-w-[160px]">
+        <div>
           <a href="/" aria-label="Home">
             <img src="/favicon.ico" alt="logo" className="w-7 h-7 rounded-md" />
           </a>
         </div>
 
         {/* desktop links */}
-        <ul className="hidden md:flex gap-7 list-none">
+        <ul className="hidden md:flex gap-7 list-none justify-center">
           {links.map((id) => (
             <li key={id}>
               <a
