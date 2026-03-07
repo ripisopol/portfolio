@@ -328,9 +328,8 @@ export const config = {
   //     Or just leave the placeholder text as-is.
   references: {
     note: "Professional references available on request.",
-    items: [
+    items: [] as { name: string; title: string; company: string; relation?: string; contact?: string }[],
       // ✏️  Add references here once you have permission to share their details
-    ],
   },
 };
 
