@@ -29,10 +29,9 @@ export default function Nav() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.07] bg-[#18181b]/90 backdrop-blur-md">
       <nav className="max-w-[1060px] mx-auto px-4 sm:px-8 lg:px-12 h-14 flex items-center justify-between">
         {/* logo */}
-        <span className="font-mono text-[0.7rem] tracking-[0.06em] text-amber">
-          {config.nameShort}{" "}
-          <span className="text-[#52524e]">// {config.domain}</span>
-        </span>
+        <a href="/" aria-label="Home">
+          <img src="/favicon.ico" alt="logo" className="w-7 h-7 rounded-md" />
+        </a>
 
         {/* desktop links */}
         <ul className="hidden md:flex gap-7 list-none">
