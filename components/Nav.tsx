@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { config } from "@/lib/config";
 
-const links = ["about", "skills", "experience", "projects", "certifications", "contact"];
+const links = ["about", "skills", "experience", "projects", "certifications", "contact", "notes"];
 
 export default function Nav() {
   const [active, setActive] = useState("");
@@ -27,20 +27,19 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.07] bg-[#18181b]/90 backdrop-blur-md">
-      <nav className="max-w-[1060px] mx-auto px-4 sm:px-8 lg:px-12 h-14 grid grid-cols-3 items-center">
-        {/* logo */}
-        <div>
-          <a href="/" aria-label="Home">
-            <img src="/favicon.ico" alt="logo" className="w-7 h-7 rounded-md" />
-          </a>
-        </div>
+      <nav className="relative max-w-[1060px] mx-auto px-4 sm:px-8 lg:px-12 h-14 flex items-center justify-between">
 
-        {/* desktop links */}
-        <ul className="hidden md:flex gap-7 list-none justify-center">
+        {/* logo */}
+        <a href="/" aria-label="Home">
+          <img src="/favicon-32x32.png" alt="logo" className="w-6 h-6 rounded" />
+        </a>
+
+        {/* desktop links — absolutely centered */}
+        <ul className="hidden md:flex gap-7 list-none absolute left-1/2 -translate-x-1/2">
           {links.map((id) => (
             <li key={id}>
               <a
-                href={`#${id}`}
+                href={id === "notes" ? "/blog" : `#${id}`}
                 className={`font-mono text-[0.62rem] tracking-[0.1em] uppercase transition-colors duration-200 ${
                   active === id ? "text-amber" : "text-[#52524e] hover:text-amber"
                 }`}
@@ -51,19 +50,11 @@ export default function Nav() {
           ))}
         </ul>
 
-        {/* notes link + status badge / mobile toggle */}
-        <div className="flex items-center gap-4 min-w-[160px] justify-end">
-          <div className="hidden sm:flex items-center gap-5">
-            <a
-              href="/blog"
-              className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-[#52524e] hover:text-amber transition-colors duration-200"
-            >
-              notes
-            </a>
-            <div className="hidden md:flex items-center gap-2 font-mono text-[0.62rem] text-green">
-              <span className="w-[5px] h-[5px] rounded-full bg-green animate-breathe" />
-              {config.status}
-            </div>
+        {/* status badge / mobile toggle */}
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-2 font-mono text-[0.62rem] text-green">
+            <span className="w-[5px] h-[5px] rounded-full bg-green animate-breathe" />
+            {config.status}
           </div>
 
           {/* mobile menu button */}
@@ -103,7 +94,7 @@ export default function Nav() {
             {links.map((id) => (
               <a
                 key={id}
-                href={`#${id}`}
+                href={id === "notes" ? "/blog" : `#${id}`}
                 onClick={() => setOpen(false)}
                 className={`block font-mono text-[0.7rem] tracking-[0.14em] uppercase py-1.5 ${
                   active === id ? "text-amber" : "text-[#d4d4d8]"
@@ -112,14 +103,7 @@ export default function Nav() {
                 {id}
               </a>
             ))}
-            <div className="mt-2 flex items-center justify-between">
-              <a
-                href="/blog"
-                className="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#52524e] hover:text-amber transition-colors duration-200"
-                onClick={() => setOpen(false)}
-              >
-                notes
-              </a>
+            <div className="mt-2 flex items-center justify-end">
               <div className="flex items-center gap-2 font-mono text-[0.62rem] text-green">
                 <span className="w-[5px] h-[5px] rounded-full bg-green animate-breathe" />
                 {config.status}
