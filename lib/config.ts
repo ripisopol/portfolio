@@ -22,9 +22,9 @@ export const config = {
 
     titleLines: ["Monitoring, patching,", "NOC — moving toward", "DevOps & backend."],
 
-    bio: "Industrial engineering graduate working in IT operations across three Indonesian banks — BRI, BSI, and Bank Jakarta. I monitor, patch, and support production systems, and started building internal tools when the existing ones were too noisy or too manual; now turning that experience toward DevOps and infra‑focused backend work. AI helped with some of the code, but the incidents and constraints were mine.",
+    bio: "Industrial engineering graduate with 2+ years in IT operations across three Indonesian banks — BRI, BSI, and Bank Jakarta. Built two internal tools the team actually uses: a monitoring dashboard that cuts noise down to actionable alerts, and a UiPath automation that collapsed a four-hour manual report cycle into a review-and-send step. Now taking that ops background into DevOps and infrastructure engineering.",
 
-    boldInBio: "now turning that experience toward DevOps and infra‑focused backend work.",
+    boldInBio: "Now taking that ops background into DevOps and infrastructure engineering.",
 
     cta1: { label: "See my work",  href: "#projects" },
     cta2: { label: "Get in touch", href: "#contact" },
@@ -79,12 +79,12 @@ export const config = {
 
     paragraphs: [
       `I studied industrial engineering at Telkom University — systems thinking, process optimization, how to make things not break. When I graduated, I couldn't find a "proper" engineering job and landed in IT almost by accident. It turned out systems thinking applies even more in infrastructure. The degree wasn't wasted. It was just misfiled.`,
-      `Since 2023 I've worked across three of Indonesia's major banks — BRI, Bank Syariah Indonesia, and Bank Jakarta — in monitoring, vulnerability patching, and NOC support. Three flavors of "keep the lights on." Each one taught me something different about how systems behave under real load and under real constraints.`,
-      `On the lab side: VPS from scratch, observability stack, and CI/CD pipeline. This portfolio deploys itself on every push, which felt appropriate. The setup is close to production, and the mistakes are real — I treat it as a place to practice infra decisions before suggesting them at work.`,
-      `At work I've also been building tools that solve specific problems. A Python dashboard that pulls from internal monitoring tools, filters down to the alerts worth caring about, and generates ready-to-paste ticket templates — the team uses it daily. A UiPath Studio automation I initiated from scratch that handles data fetching, screenshot capture, and report generation for flash and end-of-shift reports, cutting prep time down to review-and-send.`,
+      `Since 2023 I've worked across three of Indonesia's major banks — BRI, Bank Syariah Indonesia, and Bank Jakarta — in monitoring, vulnerability patching, and NOC support. Three different flavors of "keep the lights on." Each taught me something different about how systems behave under real load and real constraints — and how fast things go wrong when those constraints get ignored.`,
+      `When the tools weren't good enough, I built better ones. A Python dashboard that filters monitoring noise down to alerts worth acting on and generates ready-to-paste ticket templates — the team uses it every shift. A UiPath automation I initiated from scratch that turned a four-hour manual Flash report cycle into a review-and-send step. Both still running in production.`,
+      `On the lab side: a VPS hardened from scratch, full observability stack, and a CI/CD pipeline that deploys this portfolio on every push to main. The setup mirrors real production decisions — because if I can't defend the config here, I shouldn't be suggesting it at work.`,
     ],
 
-    honestQuote: `No CS degree. No five-year DevOps track record. What I do have: 2+ years of watching banking infrastructure fail at inconvenient hours, a homelab I take seriously, and a habit of building tools when the existing ones are too noisy or too manual. AI assisted parts of the code, but the incidents, context, and follow-up were on me — and I document what I ship.`,
+    honestQuote: `No CS degree. No five-year DevOps track record. What I do have: 2+ years watching banking infrastructure fail at inconvenient hours, a homelab I treat seriously, and a habit of building tools when the existing ones are too slow or too noisy. AI assisted parts of the code — the incidents, constraints, and follow-up were mine, and I document what I ship.`,
 
     closing: `I read the full error message. I check the runbook. I document what broke. Industrial engineering taught me to think in systems — IT ops taught me those systems break in ways the runbook hasn't seen yet. I write those down too.`,
   },
@@ -170,11 +170,11 @@ export const config = {
       company: "Visionet Data Internasional · Bank Jakarta",
       period:  "Jul 2025 – present",
       type:    "current" as const,
-      desc:    "Monitor network, systems, servers, and applications using OPmanager and Grafana. Perform initial diagnosis, escalate to L2/L3 per SLA, handle incident documentation and shift handovers. Where the runbook meets 2am reality.",
+      desc:    "First-line monitoring and incident response across Bank Jakarta's network, systems, and applications using OPmanager and Grafana. Initial diagnosis, SLA-bound escalation, incident documentation, and shift handovers. Also where I started building tools to make the work less manual.",
       highlights: [
-        "Own first-line investigation for production alerts in banking environments, escalating clearly and on time to L2/L3.",
-        "Keep incident records and shift handovers structured so issues are easy to trace and follow up.",
-        "Use monitoring data (Grafana, OPmanager) to spot recurring patterns and suggest runbook improvements.",
+        "Lead first-line investigation for production alerts across banking infrastructure — escalate with enough context that L2/L3 can act immediately, no back-and-forth.",
+        "Built a Python monitoring dashboard used by the team every shift: filters noise to actionable alerts and generates structured ticket templates ready to paste.",
+        "Maintained shift handover quality to surface recurring patterns; used findings to propose runbook improvements that reduced repeat escalations.",
       ],
       tags: ["OPmanager", "Grafana", "incident response", "SLA", "ticketing", "escalation", "health checks"],
     },
@@ -183,11 +183,11 @@ export const config = {
       company: "Visionet Data Internasional · Bank Syariah Indonesia",
       period:  "Jan 2025 – May 2025",
       type:    "past" as const,
-      desc:    "Deployed and monitored OS and application patches using BigFix across BSI infrastructure. Tracked compliance, generated remediation reports, collaborated with security and infra teams. Learned that \"just update it\" is rarely that simple.",
+      desc:    "Patch deployment and compliance tracking across BSI infrastructure using BigFix. Managed OS and application updates across Windows and Linux servers under strict change-management gates in a regulated banking environment.",
       highlights: [
-        "Ran patch deployments with BigFix across Windows and Linux servers under change-management constraints.",
-        "Tracked patch compliance and surfaced gaps to infra and security teams in a way they could act on.",
-        "Learned to coordinate maintenance windows and rollbacks when \"just update it\" introduced new issues.",
+        "Deployed OS and application patches via BigFix across Windows and Linux servers in a regulated banking environment with strict change-management gates.",
+        "Tracked compliance gaps and surfaced remediation priorities to infra and security teams before they became audit findings.",
+        "Coordinated maintenance windows and led rollbacks when patches introduced regressions — learned that change risk is as important as the patch itself.",
       ],
       tags: ["BigFix", "patch management", "vulnerability remediation", "compliance", "change control", "Windows", "Linux"],
     },
@@ -198,9 +198,9 @@ export const config = {
       type:    "past" as const,
       desc:    "First IT role. Monitored banking application dashboards and infrastructure using ELK Stack. Detected anomalies, opened incident tickets, performed health checks on servers and core banking systems. The job that started the whole obsession.",
       highlights: [
-        "Monitored ELK dashboards for core banking applications and infrastructure during shift-based coverage.",
-        "Raised incident tickets with enough context that higher-level teams could act quickly.",
-        "Handled routine health checks and shift handovers, learning how production incidents actually unfold.",
+        "Monitored ELK dashboards for core banking applications and infrastructure across shift-based 24/7 coverage.",
+        "Raised incident tickets with structured context — symptom, timeline, affected systems — so L2 teams could act without needing a follow-up call.",
+        "Maintained shift handover quality so the next team inherited a clear picture, not just a list of open tickets.",
       ],
       tags: ["ELK Stack", "monitoring", "alerting", "incident tickets", "health checks", "shift handover"],
     },
@@ -212,11 +212,11 @@ export const config = {
   projects: [
     {
       name:   "Shift Report Automation",
-      desc:   "Internal UiPath Studio automation that semi-automates our four-hour Flash report cycle. A local robot captures dashboard screenshots via UI automation, pulls caption data from the monitoring API, and prepares content for WhatsApp group delivery so the team reviews and sends instead of rebuilding reports from scratch.",
+      desc:   "Proposed and built a UiPath Studio automation that eliminated the manual rebuild in our four-hour Flash report cycle. The robot captures dashboard screenshots via UI automation, pulls live caption data from the monitoring API, and formats everything for WhatsApp delivery — the team reviews and sends instead of rebuilding from scratch every cycle.",
       highlights: [
-        "Automates the heavy lifting in a manual process where someone took screenshots, wrote captions, and sent Flash reports to a WhatsApp group every four hours.",
-        "Uses UiPath Studio to drive the UI for screenshots and call the monitoring API for accurate captions from internal dashboards.",
-        "Runs as an internal tool from a local UiPath robot, turning each cycle into a quick review-and-send step instead of a full manual rebuild.",
+        "Collapsed a four-hour manual cycle (screenshots → captions → formatting → send) to a review-and-send step — proposed and built from scratch with no prior automation at the team.",
+        "Integrated UiPath UI automation and HTTP requests to pull accurate, real-time data from internal monitoring tools — no manual copy-paste.",
+        "In daily production use by the NOC team at Bank Jakarta.",
       ],
       stack:  ["UiPath Studio", "HTTP Requests", "Excel", "UI Automation"],
       status: "live" as const,
@@ -224,11 +224,11 @@ export const config = {
     },
     {
       name:   "VPS Lab — Full Production Setup",
-      desc:   "Built a production-style VPS from scratch. SSH hardening, UFW firewall, Docker, Nginx Proxy Manager with auto-SSL, GitHub Actions CI/CD, full observability stack. Real server, real config, real mistakes documented along the way.",
+      desc:   "A production-grade VPS environment built from scratch — not a tutorial follow-along. SSH hardening, UFW, Fail2Ban, Docker, Nginx Proxy Manager with auto-SSL, full observability stack, and CI/CD via GitHub Actions. Config decisions documented. Mistakes real.",
       highlights: [
-        "Configures a single VPS to feel like a small production environment, not a toy VM.",
-        "Uses Docker and Nginx Proxy Manager with auto-SSL to host multiple services safely.",
-        "Connects GitHub Actions to build and deploy containers, mirroring CI/CD patterns from work.",
+        "Hardened a raw Ubuntu VPS to production standards: SSH key-only auth, custom port, UFW, Fail2Ban, sysctl tuning, auditd — fully automated via Ansible playbook.",
+        "Hosts multiple services behind HTTPS using Nginx Proxy Manager with auto-SSL, each isolated in Docker bridge networks.",
+        "Push to main → GitHub Actions builds image → pushes to GHCR → deploys to VPS over SSH. Zero manual steps in the release process.",
       ],
       stack:  ["Ubuntu 24.04", "Docker", "Nginx Proxy Manager", "Grafana", "Prometheus", "Loki", "GitHub Actions"],
       status: "live" as const,
@@ -236,11 +236,11 @@ export const config = {
     },
     {
       name:   "Observability Stack",
-      desc:   "Self-hosted monitoring — Prometheus scrapes metrics, Loki aggregates logs, Promtail ships them, Grafana visualizes everything. All containers internal, accessible only through HTTPS reverse proxy. Overkill for one server. Still worth it.",
+      desc:   "Self-hosted Prometheus + Loki + Grafana stack — metrics, logs, and alerting unified. All containers run internally behind an HTTPS reverse proxy. Built to mirror what I work with in production environments, so experiments here translate directly into informed suggestions at work.",
       highlights: [
-        "Aggregates metrics and logs into a single place using Prometheus, Loki, and Grafana.",
-        "Runs all observability components behind HTTPS with restricted access, mirroring production expectations.",
-        "Used as a lab to experiment with alert rules and dashboards before applying ideas at work.",
+        "Prometheus scrapes metrics, Promtail ships logs to Loki, Grafana visualizes both — same pattern as production, practiced and broken here first.",
+        "All services locked behind HTTPS with restricted access, matching the security posture expected in regulated environments.",
+        "Used to validate alert rules and dashboard queries before proposing changes to the team's production monitoring setup.",
       ],
       stack:  ["Grafana", "Prometheus", "Loki", "Promtail", "Node Exporter", "Docker Compose"],
       status: "live" as const,
@@ -250,9 +250,9 @@ export const config = {
       name:   "This Portfolio",
       desc:   "Push to main → GitHub Actions builds Docker image → pushes to GHCR → SSHes into VPS → pulls and restarts. Zero manual steps. A portfolio that deploys itself felt appropriate for someone trying to get into DevOps.",
       highlights: [
-        "Uses Docker and GHCR to build and ship the app as a container on every push to main.",
-        "Automates deployment to a VPS over SSH, removing manual steps from the release process.",
-        "Acts as a simple but real example of CI/CD and infra as part of a personal project.",
+        "Containerized with Docker, image stored in GHCR, deployed automatically on every push to main.",
+        "GitHub Actions handles build, push, and SSH deployment to VPS — no manual release steps.",
+        "A working example of CI/CD and container-based infra, not just a description of one.",
       ],
       stack:  ["Next.js 15", "TypeScript", "Tailwind CSS", "Docker", "GitHub Actions", "GHCR"],
       status: "live" as const,
@@ -285,7 +285,7 @@ export const config = {
       name:     "AWS Certified Cloud Practitioner",
       issuer:   "Amazon Web Services",
       year:     "2022",
-      status:   "expired" as const,
+      status:   "inprogress" as const,
       credUrl:  "",   // ✏️  paste credential URL if you have it
     },
     // ✏️  Add more real certifications here when you have them
@@ -298,7 +298,7 @@ export const config = {
     items: [
       { topic: "Kubernetes",        detail: "k3s on local VM, working through CKA prep material" },
       { topic: "Terraform",         detail: "infrastructure as code — stop doing things manually" },
-      { topic: "Ansible",           detail: "configuration management basics" },
+      { topic: "Ansible",           detail: "configuration management — automating VPS hardening and deploys" },
       { topic: "Python scripting",  detail: "beyond AI-assisted — actually understanding what I ship" },
       { topic: "Bash",              detail: "proper scripting, not just one-liners" },
       // ✏️  Add or remove items freely
@@ -317,9 +317,6 @@ export const config = {
     "DevOps Engineer",
     "Cloud / Infrastructure Engineer",
     "Site Reliability Engineer",
-    "Platform Engineer",
-    "Backend Engineer (infra / operations focus)",
-    "IT Operations / NOC",
   ],
 
   // ── References ───────────────────────────────────────────────
