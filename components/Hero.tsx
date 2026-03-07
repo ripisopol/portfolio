@@ -19,7 +19,7 @@ export default function Hero() {
   const { hero, careerPath, currentFocus } = config;
 
   return (
-    <section id="hero" className="min-h-screen pt-14 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+    <section id="hero" className="min-h-screen pt-16 grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
 
       {/* ── Left ── */}
       <div className="relative flex flex-col justify-center overflow-hidden border-r border-white/[0.07]">

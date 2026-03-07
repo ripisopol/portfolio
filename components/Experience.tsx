@@ -9,8 +9,8 @@ export default function Experience() {
         <Reveal>
           <SectionHeader
             tag="experience"
-            title="Where I've been."
-            sub="IT by accident. DevOps by choice. Industrial engineer by degree — yes, really."
+            title="Recent experience."
+            sub="Industrial engineering background with 2+ years in IT operations across major Indonesian banks, now growing into DevOps and infra-focused backend work."
           />
         </Reveal>
 
@@ -32,7 +32,17 @@ export default function Experience() {
                     {e.company}
                     <span className="text-muted ml-2">· {e.period}</span>
                   </div>
-                  <p className="text-[0.86rem] text-muted leading-[1.7] max-w-[600px] mb-4">{e.desc}</p>
+                  <p className="text-[0.9rem] text-muted leading-[1.8] max-w-[640px] mb-3">{e.desc}</p>
+                  {"highlights" in e && Array.isArray((e as any).highlights) && (
+                    <ul className="mb-4 space-y-1.5">
+                      {(e as any).highlights.map((h: string, idx: number) => (
+                        <li key={idx} className="flex gap-2 text-[0.86rem] text-muted leading-[1.6] max-w-[640px]">
+                          <span className="text-amber mt-[3px]">•</span>
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="flex flex-wrap gap-1.5">
                     {e.tags.map((t) => (
                       <span key={t} className="font-mono text-[0.58rem] text-dim bg-[#18181b] border border-white/[0.07] px-2 py-0.5">

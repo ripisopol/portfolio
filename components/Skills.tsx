@@ -21,8 +21,8 @@ export default function Skills() {
         <Reveal>
           <SectionHeader
             tag="skills"
-            title="What I actually know."
-            sub="Honest color coding. No skill bars, no percentages, no lying."
+            title="Skills I use in practice."
+            sub="Honest levels for the tools I rely on in production and the ones I’m actively learning."
           />
           <div className="flex flex-wrap gap-5 mb-8">
             {legendItems.map((li) => (

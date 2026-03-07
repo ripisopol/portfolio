@@ -18,8 +18,8 @@ export default function Projects() {
         <Reveal>
           <SectionHeader
             tag="projects"
-            title="Things I've actually built."
-            sub="Real servers. Real pipelines. No todo apps. (I mean it.)"
+            title="Projects that match the work."
+            sub="Production-style monitoring, automation, and infrastructure projects that mirror the environments I work in."
           />
         </Reveal>
 
@@ -37,7 +37,17 @@ export default function Projects() {
                   <div className="font-serif italic text-[1.35rem] text-[#f0ece4] mb-2 group-hover:text-amber transition-colors duration-200">
                     {p.name}
                   </div>
-                  <p className="text-[0.86rem] text-muted leading-[1.7] max-w-[600px] mb-4">{p.desc}</p>
+                  <p className="text-[0.9rem] text-muted leading-[1.8] max-w-[640px] mb-3">{p.desc}</p>
+                  {"highlights" in p && Array.isArray((p as any).highlights) && (
+                    <ul className="mb-4 space-y-1.5">
+                      {(p as any).highlights.map((h: string, idx: number) => (
+                        <li key={idx} className="flex gap-2 text-[0.86rem] text-muted leading-[1.6] max-w-[640px]">
+                          <span className="text-amber mt-[3px]">•</span>
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="flex flex-wrap gap-1.5">
                     {p.stack.map((s) => (
                       <span key={s} className="font-mono text-[0.58rem] text-dim bg-[#27272a] border border-white/[0.07] px-2 py-0.5">
